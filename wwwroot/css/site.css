@@ -1,6 +1,121 @@
 ﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
 
+
+.table-list {
+    width: 100%;
+    border-collapse: collapse;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    border-width: 1px;
+}
+
+    .table-list,
+    .table-list th,
+    .table-list td {
+        border: 1px solid #bdc3c7;
+        text-align: center;
+    }
+
+        .table-list th,
+        .table-list td {
+            padding: 0.6rem 0.5rem;
+        }
+
+        .table-list th {
+            background-color: #6ECAFA;
+        }
+
+        .table-list tbody tr:nth-child(odd) {
+            background-color: #eeeeee;
+        }
+
+        .table-list tbody tr:nth-child(even) {
+            background-color: #e2e2e2;
+        }
+
+
+.list-actions li {
+    display: inline-block;
+}
+
+.list-actions {
+    margin: 0;
+    text-align: center;
+    list-style-type: none;
+    padding: 0;
+}
+
+.list-actions-button-details,
+.list-actions-button-edit,
+.list-actions-button-delete {
+    display: inline-block;
+    width: 100px;
+    padding: 0.5rem 0.5rem;
+    border-radius: 10px;
+    color: black;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+}
+
+.list-actions-button-details {
+    background-color: #3a9ee1;
+}
+
+.list-actions-button-details:hover {
+    background-color: #59b6f4;
+}
+
+.list-actions-button-edit,
+.button-edit {
+    background-color: #f5a01b;
+}
+
+.list-actions-button-edit:hover,
+.button-edit:hover {
+    background-color: #f7d239;
+}
+
+.list-actions-button-delete,
+.button-cancel {
+    background-color: #e91e1e;
+}
+
+.list-actions-button-delete:hover,
+.button-cancel:hover {
+    background-color: #f44141;
+}
+
+.button-add,
+.button-submit {
+    background-color: #27ae60;
+}
+
+.button-add:hover,
+.button-submit:hover {
+    background-color: #2ecc71;
+}
+
+.button-add,
+.button-submit,
+.button-cancel {
+    border: 1px solid #808283;
+    border-radius: 12px;
+    color: white;
+    text-align: center;
+    margin-top: 1rem;
+    width: 100%;
+    padding: 0.6rem 2rem;
+}
+
+.my {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
 a.navbar-brand {
   white-space: normal;
   text-align: center;

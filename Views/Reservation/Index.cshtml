@@ -1,0 +1,53 @@
+﻿@model IEnumerable<Task3.DTO.Responses.ReservationListResponse>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Reservations</h1>
+</div>
+<div>
+    <table class="table-list">
+        <thead>
+            <tr>
+                <th class="uppercase text-center">Employee</th>
+                <th class="uppercase text-center">Workplace</th>
+                <th class="uppercase text-center">From</th>
+                <th class="uppercase text-center">To</th>
+                <th class="uppercase text-center">WhenMade</th>
+                <th class="uppercase text-center">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var x in Model)
+            {
+                <tr>
+                    <td class="text-center">@x.Employee</td>
+                    <td class="text-center">@x.WorkplaceID</td>
+                    <td class="text-center">@x.DateFrom</td>
+                    <td class="text-center">@x.DateTo</td>
+                    <td class="text-center">@x.WhenMade</td>
+                    <td>
+                        <ul class="list-actions">
+                            <li>
+                                @Html.ActionLink("Details", "Details", new { Id = x.ID }, new { @class = "list-actions-button-details" })
+                            </li>
+                            <li>
+                                @Html.ActionLink("Edit", "Edit", new { Id = x.ID }, new { @class = "list-actions-button-edit" })
+                            </li>
+                            <li>
+                                @Html.ActionLink("Delete", "Delete", new { Id = x.ID }, new { @class = "list-actions-button-delete" })
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <div class="col-md-4">
+        <div class="my">
+            @Html.ActionLink("Add reservation", "Create", new { }, new { @class = "button-submit" })
+        </div>
+    </div>
+</div>
