@@ -9,17 +9,17 @@ using Task3.Repositories;
 
 namespace Task3.Services
 {
-    public class EmployeeService : IEmployee
+    public class WorkplaceService : IWorkplace
     {
-        private readonly IEmployeeRepository _repository;
-        public EmployeeService(IEmployeeRepository repository)
+        private readonly IWorkplaceRepository _repository;
+        public WorkplaceService(IWorkplaceRepository repository)
         {
             _repository = repository;
         }
 
-        public List<Employee> GetAllEmployees()
+        public List<Workplace> GetWorkplaces()
         {
-            return _repository.GetEmployees();
+            return _repository.GetWorkplaces();
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Task3.DTO.Responses.ReservationListResponse>
+﻿@model IEnumerable<Task3.DTO.Responses.ReservationResponse>
 
 @{
     ViewData["Title"] = "Reservations";
@@ -24,7 +24,7 @@
             {
                 <tr>
                     <td class="text-center">@x.Employee</td>
-                    <td class="text-center">@x.WorkplaceID</td>
+                    <td class="text-center">@x.Workplace</td>
                     <td class="text-center">@x.DateFrom</td>
                     <td class="text-center">@x.DateTo</td>
                     <td class="text-center">@x.WhenMade</td>

@@ -1,42 +1,34 @@
-﻿@model IEnumerable<Task3.Models.Employee>
+﻿@model IEnumerable<Task3.DbModels.Employee>
 
-    @{
-        ViewData["Title"] = "Employees";
-    }
+@{
+    ViewData["Title"] = "Employees";
+}
 
-    <div class="text-center">
-        <h1 class="display-4">Employees</h1>
-    </div>
-    <div>
-        <table class="table-list">
-            <thead>
+<div class="text-center">
+    <h1 class="display-4">Employees</h1>
+</div>
+<div>
+    <table class="table-list">
+        <thead>
+            <tr>
+                <th class="uppercase text-center">First Name</th>
+                <th class="uppercase text-center">Last Name</th>
+                <th class="uppercase text-center">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var x in Model)
+            {
                 <tr>
-                    <th class="uppercase text-center">First Name</th>
-                    <th class="uppercase text-center">Last Name</th>
-                    @*<th class="uppercase text-center">Actions</th>*@
+                    <td class="text-center">@x.FirstName</td>
+                    <td class="text-center">@x.LastName</td>
+                    <td>
+                        <ul class="list-actions">
+
+                        </ul>
+                    </td>
                 </tr>
-            </thead>
-            <tbody>
-                @foreach (var x in Model)
-                {
-                    <tr>
-                        <td class="text-center">@x.FirstName</td>
-                        <td class="text-center">@x.LastName</td>
-                        @*<td>
-                            <ul class="list-actions">
-                                <li>
-                                    <a href="" class="list-actions-button-details">Details</a>
-                                </li>
-                                <li>
-                                    <a href="" class="list-actions-button-edit">Edit</a>
-                                </li>
-                                <li>
-                                    <a href="" class="list-actions-button-delete">Delete</a>
-                                </li>
-                            </ul>
-                        </td>*@
-                    </tr>
-                }
-            </tbody>
-        </table>
-    </div>
+            }
+        </tbody>
+    </table>
+</div>

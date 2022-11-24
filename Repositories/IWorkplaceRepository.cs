@@ -6,8 +6,8 @@ using Task3.DbModels;
 
 namespace Task3.Repositories
 {
-    public interface IEmployeeRepository
+    public interface IWorkplaceRepository
     {
-        List<Employee> GetEmployees();
+        List<Workplace> GetWorkplaces();
     }
 }

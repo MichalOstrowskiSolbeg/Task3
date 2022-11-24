@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Metadata;
 
 #nullable disable
 
-namespace Task3.Models
+namespace Task3.DbModels
 {
     public partial class MyDbContext : DbContext
     {

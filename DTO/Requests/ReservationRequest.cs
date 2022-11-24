@@ -1,20 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
-#nullable disable
-
-namespace Task3.Models
+namespace Task3.DTO.Requests
 {
-    public partial class Reservation
+    public class ReservationRequest
     {
         public int Id { get; set; }
         public int EmployeeId { get; set; }
         public int WorkplaceId { get; set; }
         public DateTime DateFrom { get; set; }
         public DateTime DateTo { get; set; }
-        public DateTime WhenMade { get; set; }
-
-        public virtual Employee Employee { get; set; }
-        public virtual Workplace Workplace { get; set; }
+        public string ExceptionMessage { get; set; }
     }
 }

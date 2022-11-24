@@ -1,7 +1,9 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Task3.DbModels;
 using Task3.DTO.Responses;
 using Task3.Models;
 
@@ -15,21 +17,51 @@ namespace Task3.Repositories
             _context = context;
         }
 
-
-        public List<ReservationListResponse> GetReservations()
+        public Reservation GetReservation(int id)
         {
-            var results = (from x in _context.Reservations
-                           select new ReservationListResponse
-                           {
-                               ID = x.Id,
-                               Employee = x.Employee.FirstName + " " + x.Employee.LastName,
-                               DateFrom = x.DateFrom,
-                               DateTo = x.DateTo,
-                               WhenMade = x.WhenMade,
-                               WorkplaceID = x.WorkplaceId
-                           }).ToList();
+            return _context.Reservations.Include(r => r.Employee)
+                .Include(r => r.Workplace).First(x => x.Id == id);
+        }
 
-            return results;
+        public List<Reservation> GetReservations()
+        {
+            return _context.Reservations.Include(r => r.Employee)
+                .Include(r => r.Workplace).ToList();
+        }
+
+
+        public void CreateReservation(Reservation request)
+        {
+            _context.Reservations.Add(request);
+            _context.SaveChanges();
+        }
+
+        public void EditReservation(Reservation request)
+        {
+            _context.Reservations.Update(request);
+            _context.SaveChanges();
+        }
+
+        public void DeleteReservation(int id)
+        {
+            _context.Reservations.Remove(_context.Reservations.Find(id));
+            _context.SaveChanges();
+        }
+
+        public bool IsReservationDateAvailable(DateTime From, DateTime To, int workplaceId)
+        {
+            return !_context.Reservations
+                .Where(x => x.WorkplaceId == workplaceId && ((x.DateFrom > From && x.DateFrom < To) || (x.DateTo > From && x.DateTo < To)))
+                .Any();
+        }
+
+        public bool IsReservationDateAvailable(DateTime From, DateTime To, int workplaceId, int reservationID)
+        {
+            return !_context.Reservations
+                .Where(x => x.Id != reservationID 
+                && x.WorkplaceId == workplaceId 
+                && ((x.DateFrom > From && x.DateFrom < To) || (x.DateTo > From && x.DateTo < To)))
+                .Any();
         }
     }
 }

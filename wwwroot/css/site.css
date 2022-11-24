@@ -1,7 +1,6 @@
 ﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
 
-
 .table-list {
     width: 100%;
     border-collapse: collapse;
@@ -10,29 +9,29 @@ for details on configuring this project to bundle and minify static web assets. 
     border-width: 1px;
 }
 
-    .table-list,
-    .table-list th,
-    .table-list td {
-        border: 1px solid #bdc3c7;
-        text-align: center;
-    }
+.table-list,
+.table-list th,
+.table-list td {
+    border: 1px solid #bdc3c7;
+    text-align: center;
+}
 
-        .table-list th,
-        .table-list td {
-            padding: 0.6rem 0.5rem;
-        }
+.table-list th,
+.table-list td {
+    padding: 0.6rem 0.5rem;
+}
 
-        .table-list th {
-            background-color: #86D3FC;
-        }
+.table-list th {
+    background-color: #86D3FC;
+}
 
-        .table-list tbody tr:nth-child(odd) {
-            background-color: #eeeeee;
-        }
+.table-list tbody tr:nth-child(odd) {
+    background-color: #eeeeee;
+}
 
-        .table-list tbody tr:nth-child(even) {
-            background-color: #e2e2e2;
-        }
+.table-list tbody tr:nth-child(even) {
+    background-color: #e2e2e2;
+}
 
 
 .list-actions li {
@@ -84,7 +83,7 @@ for details on configuring this project to bundle and minify static web assets. 
 
 .list-actions-button-delete:hover,
 .button-cancel:hover {
-    background-color: #f44141;
+    background-color: #F75A5A;
 }
 
 .button-add,
@@ -99,7 +98,8 @@ for details on configuring this project to bundle and minify static web assets. 
 
 .button-add,
 .button-submit,
-.button-cancel {
+.button-cancel,
+.button-edit {
     border: 1px solid #808283;
     border-radius: 12px;
     color: white;
@@ -115,73 +115,84 @@ for details on configuring this project to bundle and minify static web assets. 
     flex-direction: column;
 }
 
+.errors-text {
+    display: block;
+    margin-left: 0.1rem;
+    margin-bottom: 0.5rem;
+    color: #e20c0c;
+}
+
+
 
 
 a.navbar-brand {
-  white-space: normal;
-  text-align: center;
-  word-break: break-all;
+    white-space: normal;
+    text-align: center;
+    word-break: break-all;
 }
 
 /* Provide sufficient contrast against white background */
 a {
-  color: #0366d6;
+    color: #0366d6;
 }
 
 .btn-primary {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
 }
 
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
 }
 
 /* Sticky footer styles
 -------------------------------------------------- */
 html {
-  font-size: 14px;
+    font-size: 14px;
 }
+
 @media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+    html {
+        font-size: 16px;
+    }
 }
 
 .border-top {
-  border-top: 1px solid #e5e5e5;
+    border-top: 1px solid #e5e5e5;
 }
+
 .border-bottom {
-  border-bottom: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
 }
 
 .box-shadow {
-  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
 }
 
 button.accept-policy {
-  font-size: 1rem;
-  line-height: inherit;
+    font-size: 1rem;
+    line-height: inherit;
 }
 
 /* Sticky footer styles
 -------------------------------------------------- */
 html {
-  position: relative;
-  min-height: 100%;
+    position: relative;
+    min-height: 100%;
 }
 
 body {
-  /* Margin bottom by footer height */
-  margin-bottom: 60px;
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
 }
+
 .footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  white-space: nowrap;
-  line-height: 60px; /* Vertically center the text there */
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    line-height: 60px; /* Vertically center the text there */
 }

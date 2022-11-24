@@ -1,3 +1,5 @@
+using FluentValidation;
+using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -9,10 +11,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Task3.DbModels;
 using Task3.Interfaces;
-using Task3.Models;
 using Task3.Repositories;
 using Task3.Services;
+using Task3.Validators;
 
 namespace Task3
 {
@@ -32,10 +35,16 @@ namespace Task3
                 options.UseSqlServer(Configuration.GetConnectionString("Database")));
             services.AddControllersWithViews();
 
-            services.AddScoped<IReservationRepository, ReservationRepository>();
-            services.AddScoped<IReservation, ReservationService>();
-            services.AddScoped<IEmployeeRepository, EmployeeRepository>();
-            services.AddScoped<IEmployee, EmployeeService>();
+            services.AddFluentValidationAutoValidation();
+            services.AddFluentValidationClientsideAdapters();
+            services.AddValidatorsFromAssembly(typeof(ReservationRequestValidator).Assembly);
+
+            services.AddTransient<IReservationRepository, ReservationRepository>();
+            services.AddTransient<IReservation, ReservationService>();
+            services.AddTransient<IEmployeeRepository, EmployeeRepository>();
+            services.AddTransient<IEmployee, EmployeeService>();
+            services.AddTransient<IWorkplaceRepository, WorkplaceRepository>();
+            services.AddTransient<IWorkplace, WorkplaceService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

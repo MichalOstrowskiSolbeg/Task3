@@ -1,0 +1,38 @@
+﻿@model IEnumerable<Task3.DbModels.Workplace>
+
+@{
+    ViewData["Title"] = "Workplaces";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Workplaces</h1>
+</div>
+<div>
+    <table class="table-list">
+        <thead>
+            <tr>
+                <th class="uppercase text-center">Id</th>
+                <th class="uppercase text-center">Description</th>
+                <th class="uppercase text-center">Floor</th>
+                <th class="uppercase text-center">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var x in Model)
+            {
+                <tr>
+                    <td class="text-center">@x.Id</td>
+                    <td class="text-center">@x.Description</td>
+                    <td class="text-center">@x.Floor</td>
+                    <td>
+                        <ul class="list-actions">
+                            <li>
+                                @Html.ActionLink("Details", "Details", new { Id = x.Id }, new { @class = "list-actions-button-details" })
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

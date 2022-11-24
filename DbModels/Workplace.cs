@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 #nullable disable
 
-namespace Task3.Models
+namespace Task3.DbModels
 {
     public partial class Workplace
     {
@@ -15,6 +15,7 @@ namespace Task3.Models
 
         public int Id { get; set; }
         public string Description { get; set; }
+        public int Floor { get; set; }
 
         public virtual ICollection<Reservation> Reservations { get; set; }
         public virtual ICollection<WorkplaceItem> WorkplaceItems { get; set; }

@@ -4,10 +4,10 @@ using System.Linq;
 using System.Threading.Tasks;
 using Task3.DbModels;
 
-namespace Task3.Repositories
+namespace Task3.Interfaces
 {
-    public interface IEmployeeRepository
+    public interface IWorkplace
     {
-        List<Employee> GetEmployees();
+        List<Workplace> GetWorkplaces();
     }
 }
