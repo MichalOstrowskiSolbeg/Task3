@@ -1,11 +1,13 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using RepositoryLayer.DbModels;
+using RepositoryLayer.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Task3.DbModels;
 
-namespace Task3.Repositories
+
+namespace RepositoryLayer.Repositories
 {
     public class WorkplaceRepository : IWorkplaceRepository
     {

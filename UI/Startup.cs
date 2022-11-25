@@ -7,13 +7,14 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using RepositoryLayer;
+using RepositoryLayer.Interfaces;
+using RepositoryLayer.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Task3.DbModels;
 using Task3.Interfaces;
-using Task3.Repositories;
 using Task3.Services;
 using Task3.Validators;
 

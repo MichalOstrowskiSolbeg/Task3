@@ -1,10 +1,11 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
+using RepositoryLayer.DbModels;
 
 #nullable disable
 
-namespace Task3.DbModels
+namespace RepositoryLayer
 {
     public partial class MyDbContext : DbContext
     {

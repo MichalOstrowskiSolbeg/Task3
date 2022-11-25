@@ -1,9 +1,10 @@
-﻿using System;
+﻿using RepositoryLayer.DbModels;
+using System;
 using System.Collections.Generic;
 
 #nullable disable
 
-namespace Task3.DbModels
+namespace RepositoryLayer.DbModels
 {
     public partial class Reservation
     {

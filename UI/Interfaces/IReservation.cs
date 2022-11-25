@@ -2,10 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Task3.DbModels;
 using Task3.DTO.Requests;
 using Task3.DTO.Responses;
-using Task3.Models;
 
 namespace Task3.Interfaces
 {

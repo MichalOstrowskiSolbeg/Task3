@@ -1,11 +1,7 @@
-﻿using System;
+﻿using RepositoryLayer.DbModels;
+using RepositoryLayer.Interfaces;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Task3.DbModels;
 using Task3.Interfaces;
-using Task3.Models;
-using Task3.Repositories;
 
 namespace Task3.Services
 {
