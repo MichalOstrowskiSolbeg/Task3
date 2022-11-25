@@ -1,9 +1,9 @@
 ﻿using RepositoryLayer.DbModels;
 using RepositoryLayer.Interfaces;
 using System.Collections.Generic;
-using Task3.Interfaces;
+using ServiceLayer.Interfaces;
 
-namespace Task3.Services
+namespace ServiceLayer.Services
 {
     public class EmployeeService : IEmployee
     {

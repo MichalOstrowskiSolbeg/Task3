@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Task3.DTO.Requests
+namespace ServiceLayer.DTO.Requests
 {
     public class ReservationRequest
     {

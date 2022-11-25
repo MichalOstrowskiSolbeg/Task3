@@ -1,12 +1,12 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using ServiceLayer.DTO.Requests;
+using ServiceLayer.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Task3.DTO.Requests;
-using Task3.Interfaces;
-using Task3.Services;
+using ServiceLayer.Services;
 
 namespace Task3.Controllers
 {

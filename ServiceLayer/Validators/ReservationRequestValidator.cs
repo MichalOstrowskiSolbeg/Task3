@@ -1,7 +1,7 @@
 ﻿using FluentValidation;
-using Task3.DTO.Requests;
+using ServiceLayer.DTO.Requests;
 
-namespace Task3.Validators
+namespace ServiceLayer.Validators
 {
     public class ReservationRequestValidator : AbstractValidator<ReservationRequest>
     {

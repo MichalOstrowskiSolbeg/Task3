@@ -1,11 +1,11 @@
-﻿using System;
+﻿using ServiceLayer.DTO.Requests;
+using ServiceLayer.DTO.Responses;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Task3.DTO.Requests;
-using Task3.DTO.Responses;
 
-namespace Task3.Interfaces
+namespace ServiceLayer.Interfaces
 {
     public interface IReservation
     {

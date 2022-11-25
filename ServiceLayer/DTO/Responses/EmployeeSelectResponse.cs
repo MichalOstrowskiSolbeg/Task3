@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Task3.DTO.Responses
+namespace ServiceLayer.DTO.Responses
 {
     public class EmployeeSelectResponse
     {

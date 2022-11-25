@@ -10,13 +10,13 @@ using Microsoft.Extensions.Hosting;
 using RepositoryLayer;
 using RepositoryLayer.Interfaces;
 using RepositoryLayer.Repositories;
+using ServiceLayer.Interfaces;
+using ServiceLayer.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Task3.Interfaces;
-using Task3.Services;
-using Task3.Validators;
+using ServiceLayer.Validators;
 
 namespace Task3
 {

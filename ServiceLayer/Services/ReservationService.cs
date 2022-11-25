@@ -3,11 +3,12 @@ using RepositoryLayer.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using Task3.DTO.Requests;
-using Task3.DTO.Responses;
-using Task3.Interfaces;
 
-namespace Task3.Services
+using ServiceLayer.Interfaces;
+using ServiceLayer.DTO.Responses;
+using ServiceLayer.DTO.Requests;
+
+namespace ServiceLayer.Services
 {
     public class ReservationService : IReservation
     {

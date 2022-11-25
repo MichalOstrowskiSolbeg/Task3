@@ -7,7 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Task3", "Task3.csproj", "{A
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UI", "UI", "{4635C877-1A28-4A8C-AFD4-79DF5BAF4DDC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepositoryLayer", "..\RepositoryLayer\RepositoryLayer.csproj", "{77C0E389-F7C6-4B2D-827E-03260181C07B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RepositoryLayer", "..\RepositoryLayer\RepositoryLayer.csproj", "{77C0E389-F7C6-4B2D-827E-03260181C07B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceLayer", "..\ServiceLayer\ServiceLayer.csproj", "{74DFD74C-8C4B-433F-94EB-050FC7C296D8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,6 +25,10 @@ Global
 		{77C0E389-F7C6-4B2D-827E-03260181C07B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{77C0E389-F7C6-4B2D-827E-03260181C07B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{77C0E389-F7C6-4B2D-827E-03260181C07B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{74DFD74C-8C4B-433F-94EB-050FC7C296D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74DFD74C-8C4B-433F-94EB-050FC7C296D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74DFD74C-8C4B-433F-94EB-050FC7C296D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74DFD74C-8C4B-433F-94EB-050FC7C296D8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
