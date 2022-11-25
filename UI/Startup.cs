@@ -17,6 +17,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using ServiceLayer.Validators;
+using ServiceLayer;
 
 namespace Task3
 {
@@ -40,12 +41,8 @@ namespace Task3
             services.AddFluentValidationClientsideAdapters();
             services.AddValidatorsFromAssembly(typeof(ReservationRequestValidator).Assembly);
 
-            services.AddTransient<IReservationRepository, ReservationRepository>();
-            services.AddTransient<IReservation, ReservationService>();
-            services.AddTransient<IEmployeeRepository, EmployeeRepository>();
-            services.AddTransient<IEmployee, EmployeeService>();
-            services.AddTransient<IWorkplaceRepository, WorkplaceRepository>();
-            services.AddTransient<IWorkplace, WorkplaceService>();
+            services.AddRepositoryLayer();
+            services.AddServiceLayer();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
