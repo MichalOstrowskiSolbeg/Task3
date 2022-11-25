@@ -9,5 +9,6 @@ namespace Task3.Interfaces
     public interface IEmployee
     {
         List<Employee> GetAllEmployees();
+        Employee GetEmployee(int id);
     }
 }

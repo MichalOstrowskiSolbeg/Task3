@@ -1,0 +1,48 @@
+﻿@model Task3.DbModels.Workplace
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Workplace details</h1>
+</div>
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Id" class="control-label">Id</label>
+                <input asp-for="Id" class="form-control" readonly />
+            </div>
+            <div class="form-group">
+                <label asp-for="Description" class="control-label">Description</label>
+                <input asp-for="Description" class="form-control" readonly />
+            </div>
+            <div class="form-group">
+                <label asp-for="Floor" class="control-label">Floor</label>
+                <input asp-for="Floor" class="form-control" readonly />
+            </div>
+        </form>
+        <div class="my">
+            <a class="button-cancel" asp-action="Index">Back</a>
+        </div>
+    </div>
+    <table class="table-list">
+        <thead>
+            <tr>
+                <th class="uppercase text-center">Count</th>
+                <th class="uppercase text-center">Item Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var x in Model.WorkplaceItems)
+            {
+                <tr>
+                    <td class="text-center">@x.Count</td>
+                    <td class="text-center">@x.Item.Name</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

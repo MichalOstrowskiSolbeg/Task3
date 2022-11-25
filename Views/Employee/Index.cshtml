@@ -24,7 +24,9 @@
                     <td class="text-center">@x.LastName</td>
                     <td>
                         <ul class="list-actions">
-
+                            <li>
+                                @Html.ActionLink("Details", "Details", new { Id = x.Id }, new { @class = "list-actions-button-details" })
+                            </li>
                         </ul>
                     </td>
                 </tr>

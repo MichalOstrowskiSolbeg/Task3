@@ -20,5 +20,10 @@ namespace Task3.Controllers
         {
             return View(_service.GetWorkplaces());
         }
+
+        public IActionResult Details(int id)
+        {
+            return View(_service.GetWorkplace(id));
+        }
     }
 }

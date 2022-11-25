@@ -9,5 +9,6 @@ namespace Task3.Interfaces
     public interface IWorkplace
     {
         List<Workplace> GetWorkplaces();
+        Workplace GetWorkplace(int id);
     }
 }

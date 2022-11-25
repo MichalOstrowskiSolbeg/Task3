@@ -9,5 +9,6 @@ namespace Task3.Repositories
     public interface IWorkplaceRepository
     {
         List<Workplace> GetWorkplaces();
+        Workplace GetWorkplace(int id);
     }
 }

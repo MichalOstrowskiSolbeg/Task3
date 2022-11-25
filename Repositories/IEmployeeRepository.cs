@@ -9,5 +9,6 @@ namespace Task3.Repositories
     public interface IEmployeeRepository
     {
         List<Employee> GetEmployees();
+        Employee GetEmployee(int id);
     }
 }

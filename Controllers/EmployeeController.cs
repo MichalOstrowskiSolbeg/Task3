@@ -19,5 +19,10 @@ namespace Task3.Controllers
         {
             return View(_service.GetAllEmployees());
         }
+
+        public IActionResult Details(int id)
+        {
+            return View(_service.GetEmployee(id));
+        }
     }
 }

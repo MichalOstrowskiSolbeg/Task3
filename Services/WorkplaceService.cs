@@ -17,6 +17,11 @@ namespace Task3.Services
             _repository = repository;
         }
 
+        public Workplace GetWorkplace(int id)
+        {
+            return _repository.GetWorkplace(id);
+        }
+
         public List<Workplace> GetWorkplaces()
         {
             return _repository.GetWorkplaces();

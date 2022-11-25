@@ -65,6 +65,7 @@ namespace Task3.Services
             };
         }
 
+
         public void CreateReservation(ReservationRequest request)
         {
             if (_repository.IsReservationDateAvailable(request.DateFrom, request.DateTo, request.WorkplaceId))

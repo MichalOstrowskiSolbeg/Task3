@@ -21,5 +21,10 @@ namespace Task3.Services
         {
             return _repository.GetEmployees();
         }
+
+        public Employee GetEmployee(int id)
+        {
+            return _repository.GetEmployee(id);
+        }
     }
 }

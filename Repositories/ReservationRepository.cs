@@ -29,7 +29,6 @@ namespace Task3.Repositories
                 .Include(r => r.Workplace).ToList();
         }
 
-
         public void CreateReservation(Reservation request)
         {
             _context.Reservations.Add(request);
