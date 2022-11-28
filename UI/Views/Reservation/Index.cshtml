@@ -23,8 +23,8 @@
             @foreach (var x in Model)
             {
                 <tr>
-                    <td class="text-center">@x.Employee</td>
-                    <td class="text-center">@x.Workplace</td>
+                    <td class="text-center">@Html.ActionLink(x.Employee, "Details", "Employee", new { Id = x.EmployeeId }, null)</td>
+                    <td class="text-center">@Html.ActionLink(x.Workplace, "Details", "Workplace", new { Id = x.WorkplaceId }, null)</td>
                     <td class="text-center">@x.DateFrom</td>
                     <td class="text-center">@x.DateTo</td>
                     <td class="text-center">@x.WhenMade</td>

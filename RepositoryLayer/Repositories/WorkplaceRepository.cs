@@ -24,7 +24,7 @@ namespace RepositoryLayer.Repositories
 
         public List<Workplace> GetWorkplaces()
         {
-            return _context.Workplaces.ToList();
+            return _context.Workplaces.Include(x => x.WorkplaceItems).ThenInclude(y => y.Item).ToList();
         }
     }
 }

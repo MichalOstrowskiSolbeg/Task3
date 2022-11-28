@@ -16,6 +16,7 @@ namespace RepositoryLayer
             services.AddTransient<IReservationRepository, ReservationRepository>();
             services.AddTransient<IEmployeeRepository, EmployeeRepository>();
             services.AddTransient<IWorkplaceRepository, WorkplaceRepository>();
+            services.AddTransient<IItemRepository, ItemRepository>();
             return services;
         }
     }

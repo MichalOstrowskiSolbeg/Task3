@@ -28,6 +28,8 @@ namespace ServiceLayer.Services
             {
                 ID = x.Id,
                 DateFrom = x.DateFrom,
+                EmployeeId = x.EmployeeId,
+                WorkplaceId = x.WorkplaceId,
                 DateTo = x.DateTo,
                 WhenMade = x.WhenMade,
                 Employee = x.Employee.FirstName + " " + x.Employee.LastName,
@@ -116,8 +118,8 @@ namespace ServiceLayer.Services
             return _repositoryEmployee.GetEmployees().Select(s => new EmployeeSelectResponse
             {
                 Id = s.Id,
-                FullName = string.Format("{0} {1}", s.FirstName, s.LastName)
-            }).ToList(); ;
+                FullName = string.Format("{0} {1} ", s.FirstName, s.LastName)
+            }).ToList();
         }
 
         public List<WorkplaceSelectResponse> GetWorkplaces()
@@ -125,7 +127,7 @@ namespace ServiceLayer.Services
             return _repositoryWorkplace.GetWorkplaces().Select(s => new WorkplaceSelectResponse
             {
                 Id = s.Id,
-                Info = string.Format("{0} - {1}", s.Id, s.Description)
+                Info = string.Format("{0} - {1} ({2})", s.Id, s.Description, string.Join(" ", s.WorkplaceItems.Select(x => x.Item.Name)))
             }).ToList();
         }
     }
