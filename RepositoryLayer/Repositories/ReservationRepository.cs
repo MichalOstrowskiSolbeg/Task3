@@ -49,7 +49,8 @@ namespace RepositoryLayer.Repositories
         public bool IsReservationDateAvailable(DateTime From, DateTime To, int workplaceId)
         {
             return !_context.Reservations
-                .Where(x => x.WorkplaceId == workplaceId && ((x.DateFrom > From && x.DateFrom < To) || (x.DateTo > From && x.DateTo < To)))
+                .Where(x => x.WorkplaceId == workplaceId 
+                && ((x.DateFrom > From && x.DateFrom < To) || (x.DateTo > From && x.DateTo < To) || (x.DateFrom <= From && x.DateTo >= To)))
                 .Any();
         }
 
@@ -58,7 +59,7 @@ namespace RepositoryLayer.Repositories
             return !_context.Reservations
                 .Where(x => x.Id != reservationID 
                 && x.WorkplaceId == workplaceId 
-                && ((x.DateFrom > From && x.DateFrom < To) || (x.DateTo > From && x.DateTo < To)))
+                && ((x.DateFrom > From && x.DateFrom < To) || (x.DateTo > From && x.DateTo < To) || (x.DateFrom <= From && x.DateTo >= To)))
                 .Any();
         }
     }

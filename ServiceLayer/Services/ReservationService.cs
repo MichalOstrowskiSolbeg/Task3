@@ -67,7 +67,7 @@ namespace ServiceLayer.Services
 
         public void CreateReservation(ReservationRequest request)
         {
-            if (_repository.IsReservationDateAvailable(request.DateFrom, request.DateTo, request.WorkplaceId))
+            if (_repository.IsReservationDateAvailable(request.DateFrom.Date, request.DateTo.Date, request.WorkplaceId))
             {
                 _repository.CreateReservation(new Reservation
                 {
@@ -86,7 +86,7 @@ namespace ServiceLayer.Services
 
         public void EditReservation(ReservationRequest request)
         {
-            if (_repository.IsReservationDateAvailable(request.DateFrom, request.DateTo, request.WorkplaceId, request.Id))
+            if (_repository.IsReservationDateAvailable(request.DateFrom.Date, request.DateTo.Date, request.WorkplaceId, request.Id))
             {
                 _repository.EditReservation(new Reservation
                 {
